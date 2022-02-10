@@ -29,7 +29,7 @@ a.button, input[type="submit"] {
 }
 
 a.button.light {
-    color:rgb(241, 65, 65);
+    color:#666;
     background:#ededed;
 }
 
@@ -178,23 +178,22 @@ ul.errorlist {
 }
 
 #main {
-    float:left;        /* izmenio sam float sa left na right */
+    float:left;
     width: 96%;
     margin-right:-220px;
     overflow:hidden;
 }
 
 .product-list .item {
-    width:550px;
-    height: 550px;
+    width:25%;
     padding:10px 20px 10px 0;
-    float:left; 
+    float:left;
     text-align:center;
     line-height:1.2;
 }
 
 .product-list .item img {
-    width:550px;
+    width:100%;
     margin-bottom:8px;
 }
 
