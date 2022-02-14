@@ -27,7 +27,17 @@
         </div>
         <div id="content">
             {% block content %}
+                
             {% endblock %}
+        </div>
+        <div id="pagination">
+            {% if p.has_previous %}
+                <a href="?page={{ p.previous_page_number }}">Previous</a>
+            {% endif %}
+                Page {{ p.number }} of {{ p.paginator.num_pages }}. 
+            {% if p.has_next %}
+                <a href="?page={{ p.next_page_number }}">Next</a>
+            {% endif %}
         </div>
     </body>
 </html>
