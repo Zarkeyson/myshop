@@ -3,12 +3,12 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>{% block title %}My shop{% endblock %}</title>
+        <title>{% block title %}TopComputers{% endblock %}</title>
         <link href="{% static "css/base.css" %}" rel="stylesheet">
     </head>
     <body>
         <div id="header">
-            <a href="/" class="logo">My shop</a>
+            <a href="/" class="logo">TopComputers</a>
             <form class="search_bar" method="POST" action="{% url 'shop:search-products' %}">
                 {% csrf_token %}
                 <input type="search" placeholder="Pretraži" aria-label="Pretraži">
@@ -19,13 +19,13 @@
             <div class="cart">
                 {% with total_items=cart|length %}
                     {% if total_items > 0 %}
-                        Your cart:
+                        Vasa korpa:
                         <a href="{% url "cart:cart_detail" %}">
                             {{ total_items }} item{{ total_items|pluralize }}, 
                             ${{ cart.get_total_price }}
                         </a>
                     {% else %}
-                        Your cart is empty.
+                        Vasa korpa je prazna.
                     {% endif %}
                 {% endwith %}
             </div>
