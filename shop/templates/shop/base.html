@@ -9,11 +9,9 @@
     <body>
         <div id="header">
             <a href="/" class="logo">TopComputers</a>
-            <form class="search_bar" method="POST" action="{% url 'shop:search-products' %}">
-                {% csrf_token %}
-                <input type="search" placeholder="Pretraži" aria-label="Pretraži">
-                <button class="btn btn-outline-secondary" type="submit">Pretraži</button>
-            </form>
+            {% block navbar %}
+               
+            {% endblock %}
         </div>
         <div id="subheader">
             <div class="cart">
