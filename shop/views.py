@@ -1,3 +1,4 @@
+from email.mime import image
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from cart.form import CartAddProductForm
@@ -43,6 +44,11 @@ def product_detail(request, id, slug):
     return render(request, 'shop/product/detail.html', {'product': product, 'cart_product_form': cart_product_form})
 
 def search_products(request):
-    return render(request, 'shop/product/search_products.html', {})
+    if request.method == "POST":
+        searched = request.POST.get('searched')
+        products = Product.objects.filter(name__contains=searched)
+    return render(request, 'shop/product/search_products.html',
+                            {'searched': searched,
+                            'products': products})
 
 # Create your views here.
