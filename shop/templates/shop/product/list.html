@@ -9,7 +9,7 @@
 {% block navbar %}
                 <form class="search_bar" method="POST" action="{% url 'shop:search-products' %}">
                     {% csrf_token %}
-                    <input type="search" placeholder="Pretraži" aria-label="Pretraži">
+                    <input type="search" placeholder="Pretraži" aria-label="Pretraži" name="searched">
                     <button class="btn btn-outline-secondary" type="submit">Pretraži</button>
                 </form>
 {% endblock %}

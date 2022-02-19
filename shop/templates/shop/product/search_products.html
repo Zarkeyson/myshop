@@ -1,3 +1,4 @@
+{% extends "shop/base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -7,13 +8,24 @@
         <link href="{% static "css/base.css" %}" rel="stylesheet">
     </head>
     <body>
-        <div id="header">
-            <a href="/" class="logo">TopComputers</a>       
-        </div>    
-        <div id="content">
-            {% block content %}    
-                <h1>Hello World</h1>    
-            {% endblock %}
-        </div>
+            {% block content %}
+                    {% if searched %}
+                        <h1>You searched for {{ searched }}</h1>
+                        <br>
+                        <div class="product_list">
+                            {% for product in products %}
+                                <div class="item">  
+                                    <a href="{{ product.get_absolute_url }}">
+                                        {{ product }} 
+                                    </a> 
+                                        {{ product.price }}$
+                                    <br>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <h1>You forgot to search for product</h1>
+                    {% endif %}
+            {% endblock %} 
     </body>
 </html>
