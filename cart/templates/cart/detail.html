@@ -57,6 +57,6 @@
     <p class="text-right">
         <a href="{% url "shop:product_list" %}"class="button
         light">Nastavite sa kupovinom</a>
-        <a href="#" class="button">Čekirajte</a>
+        <a href="{% url "orders:order_create" %}" class="button">Čekirajte</a>
     </p>
 {% endblock %}
