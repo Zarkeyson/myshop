@@ -13,8 +13,11 @@
                         <h1>You searched for {{ searched }}</h1>
                         <br>
                         <div class="product_list">
+                            <ul>
                             {% for product in products %}
-                                <div class="item">  
+                                
+                                <div class="item">
+                                    <li>  
                                     <a href="{{ product.get_absolute_url }}">
                                         {{ product }} 
                                     </a> 
@@ -22,6 +25,7 @@
                                     <br>
                                 </div>
                             {% endfor %}
+                            </ul>
                         </div>
                     {% else %}
                         <h1>You forgot to search for product</h1>
