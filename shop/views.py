@@ -3,6 +3,7 @@ from .models import Category, Product
 from cart.form import CartAddProductForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
@@ -40,5 +41,8 @@ def product_detail(request, id, slug):
     cart_product_form = CartAddProductForm()
     
     return render(request, 'shop/product/detail.html', {'product': product, 'cart_product_form': cart_product_form})
+
+def search_products(request):
+    return render(request, 'shop/product/search_products.html', {})
 
 # Create your views here.

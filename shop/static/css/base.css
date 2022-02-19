@@ -184,9 +184,19 @@ ul.errorlist {
     overflow:hidden;
 }
 
-#pagination {
+.pagination {
     position: center;
     
+}
+
+#main #pagination{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    background-color: #008CBA;
 }
 
 .product-list .item {
