@@ -16,7 +16,7 @@ def product_list(request, category_slug=None):
 
     all_products = Product.objects.all()
 
-    paginator = Paginator(all_products, 6)
+    paginator = Paginator(all_products, 9)
 
     page = request.GET.get('page')
 

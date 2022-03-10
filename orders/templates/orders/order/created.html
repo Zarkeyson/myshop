@@ -1,11 +1,11 @@
 {% extends 'shop/base.html' %}
 
 {% block title %}
-    Thank you
+    Hvala Vam
 {% endblock title %}
 
 {% block content %}
-    <h1>Thank you</h1>
-    <p>Your order has been successfully completed. Your order number is <strong> {{ order.id }} </strong>.</p>
-    <a href="{% url "shop:product_list" %}" class="button.light">Continue shopping?</a>
+    <h1>Hvala Vam</h1>
+    <p>Vasa narudzbina je uspesno napravljena. Broj Vaše porudžbine je <strong> {{ order.id }} </strong>.</p>
+    <a href="{% url "shop:product_list" %}" class="button.light">Nastavite sa kupovinom?</a>
 {% endblock content %}

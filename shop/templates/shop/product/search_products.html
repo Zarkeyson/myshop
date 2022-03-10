@@ -10,7 +10,7 @@
     <body>
             {% block content %}
                     {% if searched %}
-                        <h1>You searched for {{ searched }}</h1>
+                        <h1>Tražili ste {{ searched }}</h1>
                         <br>
                         <div class="product_list">
                             <ul>
@@ -28,7 +28,7 @@
                             </ul>
                         </div>
                     {% else %}
-                        <h1>You forgot to search for product</h1>
+                        <h1>Zaboravili šta ste tražili?</h1>
                     {% endif %}
             {% endblock %} 
     </body>

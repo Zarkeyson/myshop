@@ -40,7 +40,12 @@ class Product(models.Model):
         return reverse('shop:product_detail', args=[self.id, self.slug])
     
         
+class Proizvodjac(models.Model):
+    name = models.CharField(max_length=10)
+    country = models.TextField()
 
+    def __str__(self):
+        return self.name
 
 
 # Create your models here.
